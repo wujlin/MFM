@@ -6,4 +6,21 @@ This repository contains the code and data for the paper *"Fear is Polar? A Comp
 - **Prediction.ipynb**: Includes the training and prediction code for modeling the transitions in node states.
 - **Plot.ipynb**: Provides code for visualizing the results of the model simulations.
 
-This structure should enhance the readability and professionalism of your project.
+### Key Figures:
+
+1. **CSDAG Framework**  
+   Our proposed framework for health communication models various groups of agents on multi-layer networks.  
+   ![CSDAG Framework](./graph/CSDAG.tif)
+
+2. **Network Evolution**  
+   The simulation results show the evolution of node states over time.  
+   ![Network Evolution](./graph/network_evolution.png)
+
+3. **Model Performance**  
+   The method effectively captures the temporal dynamics of node states.  
+   - Sentiment and metric trends:  
+     ![Metric and Sentiment Trends](./graph/metric+sentiment_lines.png)
+   - Media metrics and risk assessment:  
+     ![Media Metric and Risk Trends](./graph/media_metric_risk_lines.png)
+   - Parameter distribution with mean and 3SE bars:  
+     ![Parameter Distribution](./graph/parameter_distribution_with_mean_and_3se_bars.png)
