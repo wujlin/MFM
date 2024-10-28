@@ -10,7 +10,7 @@ This repository contains the code and data for the paper *"Dynamic Connectivity 
 
 1. **CSDAG Framework**  
    Our proposed framework for health communication models various groups of agents on multi-layer networks.  
-   ![CSDAG Framework](./Graph/CSDAG.tif)
+   ![CSDAG Framework](./Graph/CSDAG.png)
 
 2. **Network Evolution**  
    The simulation results show the evolution of node states over time.  
