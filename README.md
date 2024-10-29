@@ -24,3 +24,5 @@ This repository contains the code and data for the paper *"Dynamic Connectivity 
      ![Media Metric and Risk Trends](./Graph/media_metric_risk_lines.png)
    - Parameter distribution with mean and 3SE bars:  
      ![Parameter Distribution](./Graph/parameter_distribution_with_mean_and_3se_bars.png)
+   - Fine-tuned accuracy for three tasks:
+     ![Accuracy](./Graph/model_accuracy.png)
