@@ -26,5 +26,5 @@ This repository contains the code and data for the paper *"Dynamic Connectivity 
      ![Parameter Distribution](./Graph/parameter_distribution_with_mean_and_3se_bars.png)
    - Fine-tuned accuracy for three tasks:
      ![Accuracy](./Graph/model_accuracy.png)
-   - Our method framework:
-     ![Accuracy](./Graph/framework.png)     
+   - Overview of Research Methodology:
+     ![Methodology](./Graph/framework.png)     
