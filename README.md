@@ -1,11 +1,16 @@
 # CSDAG
-This repository contains the code and data for the paper *"Dynamic Connectivity of Multi-Arousal Sentiment and Feedback Loops based on Complex Network Analysis"*.
+This repository contains the code and data for the paper *"Dynamic Interplay Between Public Sentiment Well-being and Information Flows in Long-COVID Discourse"*.
 All models are deployed on a remote server, with 2 RTX4090 GPUS. 
 
-- **ABM.ipynb**: Implements the agent-based model (ABM) used in the paper, detailing the computational processes outlined in the manuscript.
-- **Text_mining.ipynb**: Contains code for text processing and sentiment analysis.
-- **Prediction.ipynb**: Includes the training and prediction code for modeling the transitions in node states.
-- **Plot.ipynb**: Provides code for visualizing the results of the model simulations.
+- **ABM**: Implements the agent-based model (ABM) used in the paper, detailing the computational processes outlined in the manuscript.
+- **Text_mining**: Contains code for text processing and sentiment analysis.
+- **Prediction**: Includes the training and prediction code for modeling the transitions in node states.
+- **Empirical study**: 对经验数据进行挖掘和分析
+- **Network analysis**: 对网络结构进行分析
+- **Comparison network**: 对经验网络和理论网络的预测效果进行比较
+- **Counterfactual**: 进行反事实分析，去除掉一些动力机制
+- **Baseline model**: 比较基线模型，包括voter model
+
 
 ### Key Figures:
 
@@ -24,7 +29,7 @@ All models are deployed on a remote server, with 2 RTX4090 GPUS.
    - Media metrics and risk assessment:  
      ![Media Metric and Risk Trends](./Graph/media_metric_risk_lines.png)
    - Parameter distribution with mean and 3SE bars:  
-     ![Parameter Distribution](./Graph/parameter_distribution_with_mean_and_3se_bars.png)
+     ![Parameter Distribution](./Graph/Figure_5.png)
    - Fine-tuned accuracy for three tasks:
      ![Accuracy](./Graph/model_accuracy.png)
    - Overview of Research Methodology:
