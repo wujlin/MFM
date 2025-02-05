@@ -36,7 +36,7 @@ Our approach synthesizes empirical observations with theoretical modeling throug
    - Statistical robustness through parameter distribution analysis:  
      ![Parameter Distribution](./Graph/Figure_5.png)
    - Task-specific performance metrics:
-     ![Accuracy](./Graph/model_accuracy.png)
+     ![Accuracy](./Graph/supplementary/S1.png)
    - Methodological overview:
      ![Methodology](./Graph/framework.png)
 
