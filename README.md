@@ -1,43 +1,86 @@
-# CSDAG: Complex Systems Dynamics in Health Communication
+# Mixed-Feedback Model for Emotional Bubble Dynamics
 
-This repository presents a comprehensive framework for analyzing the dynamic interplay between public sentiment and information flows in Long-COVID discourse. Our work introduces a novel computational approach that integrates multi-layer network analysis with agent-based modeling to understand the complex dynamics of health communication.
+This repository contains the computational framework for the paper *"Feedback Competition Drives Emotional Bubbles in Information Ecosystems During Health Crises"*. We develop a Mixed-Feedback Model (MFM) to analyze the formation mechanisms of emotional bubbles during the COVID-19 pandemic.
 
-The framework, implemented on a high-performance computing infrastructure with dual RTX4090 GPUs, encompasses several interconnected components that systematically address the theoretical and empirical aspects of health communication dynamics:
+The framework integrates mean-field theory, phase transition analysis, and agent-based network simulations to understand the nonlinear dynamics of collective emotional responses in heterogeneous information environments.
 
-### Core Components
+## Framework Components
 
-The repository's architecture reflects the methodological progression from empirical analysis to theoretical modeling:
+### Core Implementation (`src/`)
 
-- **Text_mining**: Implements advanced natural language processing techniques for sentiment extraction and discourse analysis
-- **Network_analysis**: Examines the topological properties and evolutionary patterns of communication networks
-- **ABM**: Develops a sophisticated agent-based model that captures the emergent behaviors in health communication
-- **Prediction**: Employs machine learning approaches to model state transitions and information cascades
-- **Counterfactual**: Conducts rigorous causal inference through systematic mechanism removal
-- **Baseline**: Implements comparative analyses against established models, including the voter model
+- **`Meanfield_model.py`**: Mixed-feedback model implementation with self-consistent equation solver
+- **`ParameterSpace_scan.py`**: Parameter space exploration for critical phase boundaries
+- **`Simulation_scan.py`**: Agent-based network simulations for theoretical validation
+- **`Config.py`**: Unified parameter configuration with multi-precision computing modes
 
-### Methodological Framework
+### Phase Transition Analysis
 
-Our approach synthesizes empirical observations with theoretical modeling through a series of interconnected analyses, visualized in the accompanying figures:
+- **`Poisson_correlation_analysis.py`**: Phase transition analysis for Poisson degree networks
+- **`Powerlaw_correlation_analysis.py`**: Phase transition analysis for power-law degree networks
+- **`analyze_scan_results_*.py`**: Systematic analysis and visualization of scanning results
 
-1. **CSDAG Framework**  
-   The multi-layer network architecture models the complex interactions between diverse agent groups, capturing both vertical and horizontal information flows.
-   ![CSDAG Framework](./Graph/CSDAG.png)
+### Figure Generation (`src/Figure*.py`)
 
-2. **Network Evolution**  
-   Temporal dynamics of node states reveal emergent patterns in health communication networks.
-   ![Network Evolution](./Graph/network_evolution.png)
+- **`Figure1.py`**: Classification performance and mixed-feedback framework overview
+- **`Figure2.py`**: Empirical evidence of emotional polarization dynamics
+- **`Figure3.py`**: Individual psychological thresholds driving emotional bubble formation
+- **`Figure4.py`**: Phase diagram analysis in psychological threshold space
+- **`Figure5.py`**: Critical phenomena and state-space compression at phase transitions
 
-3. **Validation and Performance**  
-   Rigorous validation demonstrates the framework's predictive power:
-   - Empirical validation through information flow analysis:  
-     ![Model validation](./Graph/Figure_4.png)
-   - Quantitative assessment of media impact and risk metrics:  
-     ![Performance analysis](./Graph/Figure_6.png)
-   - Statistical robustness through parameter distribution analysis:  
-     ![Parameter Distribution](./Graph/Figure_5.png)
-   - Task-specific performance metrics:
-     ![Accuracy](./Graph/supplementary/S1.png)
-   - Methodological overview:
-     ![Methodology](./Graph/framework.png)
+### Data Analysis (`notebooks/`)
 
-This framework provides a robust foundation for understanding the complex dynamics of health communication, with implications for public health policy and intervention design.
+- **`Text_mining.ipynb`**: Sentiment analysis on 294,434 Weibo posts
+- **`Empirical study.ipynb`**: Empirical study of Long-COVID discourse
+- **`Network_analysis.ipynb`**: Multi-layer network topology analysis
+- **`ABM.ipynb`**: Agent-based modeling implementation
+- **`Prediction.ipynb`**: Machine learning for state transition prediction
+- **`Counterfactual_analysis.ipynb`**: Counterfactual analysis validation
+
+## Methodological Approach
+
+### Mixed-Feedback Theory
+The framework models dual feedback mechanisms in information ecosystems:
+- **Mainstream media negative feedback**: $p_{risk}^{mainstream} = \frac{1-X_H+X_L}{2}$
+- **We-media positive feedback**: $p_{risk}^{wemedia} = X_H$
+- **Psychological threshold dynamics**: $\phi$ (low arousal threshold) and $\theta$ (high arousal threshold)
+
+### Phase Transition Analysis
+- Jacobian eigenvalue analysis for critical point identification
+- Correlation length divergence: $\xi \sim |r-r_c|^{-\nu}$
+- Power-law scaling behavior validation for second-order transitions
+
+### Network Simulation Framework
+- Three-layer architecture: mainstream media, we-media, and public individuals
+- Threshold-driven state transition rules
+- Microscopic dynamics validation of macroscopic theoretical predictions
+
+## Requirements
+
+- Python 3.8+
+- Dependencies: NumPy, SciPy, NetworkX, pandas, scikit-learn, matplotlib, seaborn
+- Dataset: 294,434 Weibo posts during COVID-19 (2020-2023)
+
+## Quick Start
+
+```bash
+# Install dependencies
+pip install numpy scipy networkx pandas scikit-learn matplotlib seaborn
+
+# Run mixed-feedback model
+python src/Meanfield_model.py
+
+# Parameter space exploration
+python src/ParameterSpace_scan.py
+
+# Network simulation validation
+python src/Simulation_scan.py
+
+# Generate key figures
+python src/Figure3.py  # Psychological threshold mechanisms
+python src/Figure4.py  # Phase transition analysis
+python src/Figure5.py  # Critical phenomena
+```
+
+## Data Availability
+
+All code and data supporting the conclusions are publicly available. The computational framework includes data preprocessing scripts, machine learning models, theoretical calculations, and network simulation codes for full reproducibility.
